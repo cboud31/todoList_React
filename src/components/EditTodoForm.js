@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-
-import TextField from '@material-ui/core/TextField';
+import React from 'react';
 import useInputState from '../hooks/useInputState';
 
-const EditTodoForm = ({ id, editTodo, task, toggleEditForm }) => {
+import TextField from '@material-ui/core/TextField';
+
+function EditTodoForm({ id, task, editTodo, toggleEditForm }) {
   const [value, handleChange, reset] = useInputState(task);
   return (
     <form
@@ -22,6 +22,5 @@ const EditTodoForm = ({ id, editTodo, task, toggleEditForm }) => {
       />
     </form>
   );
-};
-
+}
 export default EditTodoForm;

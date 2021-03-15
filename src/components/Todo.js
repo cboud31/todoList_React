@@ -17,13 +17,19 @@ const Todo = ({ id, task, completed, removeTodo, toggleTodo, editTodo }) => {
     <ListItem>
       {isEditing ? (
         <EditTodoForm
-          //   id={id}
           editTodo={editTodo}
+          id={id}
           task={task}
-          completed={completed}
           toggleEditForm={toggle}
         />
       ) : (
+        // <EditTodoForm
+        //   //   id={id}
+        //   editTodo={editTodo}
+        //   task={task}
+        //   completed={completed}
+        //   toggleEditForm={toggle}
+        // />
         <>
           <Checkbox
             tabIndex={-1}

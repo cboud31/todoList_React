@@ -41,9 +41,9 @@ const TodoApp = () => {
   };
 
   const editTodo = (todoID, newTask) => {
-    const updatedTodos = todos.map((todo) => {
-      todo.id === todoID ? { ...todo, task: newTask } : todo;
-    });
+    const updatedTodos = todos.map((todo) =>
+      todo.id === todoID ? { ...todo, task: newTask } : todo
+    );
     setTodos(updatedTodos);
   };
 
