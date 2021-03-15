@@ -14,7 +14,7 @@ import EditIcon from '@material-ui/icons/Edit';
 const Todo = ({ id, task, completed, removeTodo, toggleTodo, editTodo }) => {
   const [isEditing, toggle] = useToggleState(false);
   return (
-    <ListItem>
+    <ListItem style={{ height: '64px' }}>
       {isEditing ? (
         <EditTodoForm
           editTodo={editTodo}
@@ -23,13 +23,6 @@ const Todo = ({ id, task, completed, removeTodo, toggleTodo, editTodo }) => {
           toggleEditForm={toggle}
         />
       ) : (
-        // <EditTodoForm
-        //   //   id={id}
-        //   editTodo={editTodo}
-        //   task={task}
-        //   completed={completed}
-        //   toggleEditForm={toggle}
-        // />
         <>
           <Checkbox
             tabIndex={-1}
